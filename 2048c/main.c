@@ -210,7 +210,7 @@ int main() {
 			direction = getSlideDirection();
 			if (direction != 'e') {
 				copyArray(1);
-				if (!slideField(direction)) direction = 'e';
+				if (!slideField(direction) && checkEndGame() == "Continue") direction = 'e';
 				copyArray(0);
 			}
 		}
